@@ -76,3 +76,4 @@ gen### C++ template
 *.lai
 
 # Executables
+cmake-build-debug

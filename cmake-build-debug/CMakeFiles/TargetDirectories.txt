@@ -1,3 +1,0 @@
-/Users/Pengjinfei/Downloads/apue.3e/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/Pengjinfei/Downloads/apue.3e/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/Pengjinfei/Downloads/apue.3e/cmake-build-debug/CMakeFiles/apue_3e.dir

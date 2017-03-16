@@ -13,7 +13,7 @@ static void	log_doit(int, int, int, const char *, va_list ap);
  * Caller must define and set this: nonzero if
  * interactive, zero if daemon
  */
-extern int	log_to_stderr;
+//extern int	log_to_stderr;
 
 /*
  * Initialize syslog(), if running as daemon.
@@ -21,7 +21,7 @@ extern int	log_to_stderr;
 void
 log_open(const char *ident, int option, int facility)
 {
-	if (log_to_stderr == 0)
+//	if (log_to_stderr == 0)
 		openlog(ident, option, facility);
 }
 
@@ -114,11 +114,11 @@ log_doit(int errnoflag, int error, int priority, const char *fmt,
 		snprintf(buf+strlen(buf), MAXLINE-strlen(buf)-1, ": %s",
 		  strerror(error));
 	strcat(buf, "\n");
-	if (log_to_stderr) {
+/*	if (log_to_stderr) {
 		fflush(stdout);
 		fputs(buf, stderr);
 		fflush(stderr);
-	} else {
+	} else {*/
 		syslog(priority, "%s", buf);
-	}
+//	}
 }
